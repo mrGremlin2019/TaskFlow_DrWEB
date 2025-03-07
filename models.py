@@ -1,8 +1,13 @@
-from datetime import datetime
+from sqlalchemy import Column, Integer, String, DateTime
+from sqlalchemy.ext.declarative import declarative_base
 
-class Task:
-    def __init__(self, id, create_time, start_time=None, exec_time=None):
-        self.id = id
-        self.create_time = create_time
-        self.start_time = start_time
-        self.exec_time = exec_time
+# Базовый класс для моделей
+Base = declarative_base()
+
+class Task(Base):
+    __tablename__ = "tasks"
+
+    id = Column(Integer, primary_key=True, index=True)
+    create_time = Column(DateTime, nullable=False)
+    start_time = Column(DateTime, nullable=True)
+    exec_time = Column(Integer, nullable=True)
