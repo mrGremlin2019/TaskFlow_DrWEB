@@ -1,6 +1,5 @@
 from sqlalchemy import create_engine
-
-from sqlalchemy.orm import sessionmaker, Session
+from sqlalchemy.orm import sessionmaker
 from pathlib import Path
 import threading
 import time

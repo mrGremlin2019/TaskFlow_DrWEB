@@ -4,7 +4,7 @@ from datetime import datetime
 from sqlalchemy.orm import Session
 from database import DatabaseClient
 from models import Task
-from schemas import TaskCreate, TaskStatus
+from schemas import TaskStatus
 
 app = FastAPI()
 
